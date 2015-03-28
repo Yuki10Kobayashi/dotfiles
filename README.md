@@ -15,4 +15,9 @@
 % git clone [Forked Repository URL]
 % ln -sf ~/dotfiles/.vimrc ~/.vimrc
 ```
+## InstallNeoBundle Plugin
+type in your vim
+```bash
+:NeoBundleInstall
+```
 
