@@ -88,6 +88,11 @@ set number
 set ruler
 " compatibleオプションをオフにする
 set nocompatible
+" tabのスペース設定
+set noexpandtab
+set tabstop=2
+set shiftwidth=2
+set softtabstop=0
 " 移動コマンドを使ったとき、行頭に移動しない
 set nostartofline
 " 対応括弧に<と>のペアを追加
