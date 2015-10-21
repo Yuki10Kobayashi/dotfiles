@@ -8,7 +8,6 @@ set runtimepath+=~/.vim/bundle/neobundle.vim/
 endif
 call neobundle#begin(expand('~/.vim/bundle'))
 NeoBundle 'Shougo/neobundle.vim'
-call neobundle#end()
 " 以下のプラグインをバンドル
 NeoBundle 'Shougo/unite.vim'
 NeoBundle 'Shougo/vimfiler'
@@ -23,30 +22,27 @@ NeoBundle 'open-browser.vim'
 NeoBundle 'mattn/webapi-vim'
 NeoBundle 'tell-k/vim-browsereload-mac'
 NeoBundle 'hail2u/vim-css3-syntax'
-NeoBundle 'taichouchou2/html5.vim'
-NeoBundle 'taichouchou2/vim-javascript'
 NeoBundle 'kchmck/vim-coffee-script'
 NeoBundle 'tpope/vim-endwise.git' 
 NeoBundle 'ruby-matchit'
 NeoBundle 'vim-scripts/dbext.vim'
-NeoBundle 'taichouchou2/vim-rsense'
 NeoBundle 'tomtom/tcomment_vim'
-NeoBundle 'taichouchou2/vim-rails'
 NeoBundle 'romanvbabenko/rails.vim'
 NeoBundle 'ujihisa/unite-rake'
 NeoBundle 'basyura/unite-rails'
 NeoBundle 'thinca/vim-ref'
-NeoBundle 'taichouchou2/vim-ref-ri'
 NeoBundle 'taq/vim-rspec'
 NeoBundle 'scrooloose/nerdtree'
 NeoBundle 'Lokaltog/powerline'
 " シンタックス系プラグインをバンドル
 NeoBundle 'Shougo/neocomplcache'
 NeoBundle 'Shougo/neosnippet'
+NeoBundle 'Shougo/neosnippet-snippets'
 " 実行プラグインをバンドル
 NeoBundle 'thinca/vim-quickrun'
 " 編集履歴管理
 NeoBundle "sjl/gundo.vim"
+call neobundle#end()
 set t_Co=256
 " ファイラー関連
 nnoremap <Leader>e :VimFilerExplorer<CR>
