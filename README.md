@@ -1,10 +1,12 @@
 # this is my dotfiles
 
-## require neobundle
+## require dein.vim
 
 ```bash
-% mkdir -p ~/.vim/bundle
-% git clone https://github.com/Shougo/neobundle.vim ~/.vim/bundle/neobundle.vim
+% mkdir -p ~/.cache/dein
+cd ~/.cache/dein
+curl https://raw.githubusercontent.com/Shougo/dein.vim/master/bin/installer.sh > installer.sh
+sh ./installer.sh ~/.cache/dein
 ```
 
 ## Fork this Repository
@@ -15,9 +17,5 @@
 % git clone [Forked Repository URL]
 % ln -sf ~/dotfiles/.vimrc ~/.vimrc
 ```
-## InstallNeoBundle Plugin
-type in your vim
-```bash
-:NeoBundleInstall
-```
 
+## run vim

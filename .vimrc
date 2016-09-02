@@ -2,48 +2,8 @@
 set nocompatible
 " 一旦ファイルタイプ関連を無効化
 filetype off
-" neobundleでプラグインを管理
-if has('vim_starting')
-set runtimepath+=~/.vim/bundle/neobundle.vim/
-endif
-call neobundle#begin(expand('~/.vim/bundle'))
-NeoBundle 'Shougo/neobundle.vim'
-" 以下のプラグインをバンドル
-NeoBundle 'Shougo/unite.vim'
-NeoBundle 'Shougo/vimfiler'
-NeoBundle 'Shougo/vimproc'
-NeoBundle 'VimClojure'
-NeoBundle 'Shougo/vimshell'
-NeoBundle 'jpalardy/vim-slime'
-NeoBundle 'scrooloose/syntastic'
-NeoBundle 'scrooloose/nerdtree'
-NeoBundle 'mattn/emmet-vim'
-NeoBundle 'open-browser.vim'
-NeoBundle 'mattn/webapi-vim'
-NeoBundle 'tell-k/vim-browsereload-mac'
-NeoBundle 'hail2u/vim-css3-syntax'
-NeoBundle 'kchmck/vim-coffee-script'
-NeoBundle 'tpope/vim-endwise.git' 
-NeoBundle 'ruby-matchit'
-NeoBundle 'vim-scripts/dbext.vim'
-NeoBundle 'tomtom/tcomment_vim'
-NeoBundle 'romanvbabenko/rails.vim'
-NeoBundle 'ujihisa/unite-rake'
-NeoBundle 'basyura/unite-rails'
-NeoBundle 'thinca/vim-ref'
-NeoBundle 'taq/vim-rspec'
-NeoBundle 'scrooloose/nerdtree'
-NeoBundle 'Lokaltog/powerline'
-" シンタックス系プラグインをバンドル
-NeoBundle 'Shougo/neocomplcache'
-NeoBundle 'Shougo/neosnippet'
-NeoBundle 'Shougo/neosnippet-snippets'
-" 実行プラグインをバンドル
-NeoBundle 'thinca/vim-quickrun'
-" 編集履歴管理
-NeoBundle "sjl/gundo.vim"
-call neobundle#end()
 set t_Co=256
+
 " ファイラー関連
 nnoremap <Leader>e :VimFilerExplorer<CR>
 nnoremap <Leader>g :GundoToggle<CR>
@@ -267,3 +227,38 @@ if has('syntax')
   call ZenkakuSpace()
 endif
 
+
+"dein Scripts-----------------------------
+if &compatible
+  set nocompatible               " Be iMproved
+endif
+
+" Required:
+set runtimepath+=~/.cache/dein/repos/github.com/Shougo/dein.vim
+
+" Required:
+call dein#begin('~/.cache/dein')
+
+" Let dein manage dein
+" Required:
+call dein#add('Shougo/dein.vim')
+
+" Add or remove your plugins here:
+call dein#add('Shougo/neosnippet.vim')
+call dein#add('Shougo/neosnippet-snippets')
+
+" You can specify revision/branch/tag.
+call dein#add('Shougo/vimshell', { 'rev': '3787e5' })
+
+" Required:
+call dein#end()
+
+" Required:
+filetype plugin indent on
+
+" If you want to install not installed plugins on startup.
+"if dein#check_install()
+"  call dein#install()
+"endif
+
+"End dein Scripts-------------------------
